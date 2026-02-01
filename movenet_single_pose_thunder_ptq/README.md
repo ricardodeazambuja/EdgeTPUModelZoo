@@ -154,6 +154,7 @@ Latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
+- [MoveNet on Kaggle](https://www.kaggle.com/models/google/movenet/tfLite)
 - [Next-Generation Pose Detection with MoveNet and TensorFlow.js](https://blog.tensorflow.org/2021/05/next-generation-pose-detection-with-movenet-and-tensorflowjs.html) (TensorFlow Blog)
 - [Pose Estimation and Classification on Edge Devices with MoveNet and TensorFlow Lite](https://blog.tensorflow.org/2021/08/pose-estimation-and-classification-on-edge-devices-with-MoveNet-and-TensorFlow-Lite.html) (TensorFlow Blog)
 - [MoveNet on TF Hub](https://tfhub.dev/google/movenet/)

@@ -118,6 +118,7 @@ Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
+- [MobileNet V2 on Kaggle](https://www.kaggle.com/models/google/mobilenet-v2/tfLite)
 - Sandler, M. et al., "MobileNetV2: Inverted Residuals and Linear Bottlenecks" ([arXiv:1801.04381](https://arxiv.org/abs/1801.04381))
 - [ImageNet Dataset](https://www.image-net.org/)
 - [Coral Models Page](https://coral.ai/models/all/)

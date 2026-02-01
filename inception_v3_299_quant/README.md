@@ -120,6 +120,7 @@ Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
+- [Inception V3 on Kaggle](https://www.kaggle.com/models/google/inception-v3/tfLite)
 - Szegedy, C. et al., "Rethinking the Inception Architecture for Computer Vision" ([arXiv:1512.00567](https://arxiv.org/abs/1512.00567))
 - [ImageNet Dataset](https://www.image-net.org/)
 - [Coral Models Page](https://coral.ai/models/all/)

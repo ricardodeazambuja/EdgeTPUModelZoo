@@ -118,6 +118,7 @@ Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
+- [Inception V4 on Kaggle](https://www.kaggle.com/models/google/inception-v4/tfLite)
 - Szegedy, C. et al., "Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning" ([arXiv:1602.07261](https://arxiv.org/abs/1602.07261))
 - [ImageNet Dataset](https://www.image-net.org/)
 - [Coral Models Page](https://coral.ai/models/all/)

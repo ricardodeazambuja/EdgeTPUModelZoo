@@ -153,6 +153,7 @@ Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
+- [SSD MobileNet V1 on Kaggle](https://www.kaggle.com/models/tensorflow/ssd-mobilenet-v1/tfLite)
 - Liu, W. et al., "SSD: Single Shot MultiBox Detector" ([arXiv:1512.02325](https://arxiv.org/abs/1512.02325))
 - Howard, A. G. et al., "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" ([arXiv:1704.04861](https://arxiv.org/abs/1704.04861))
 - [COCO Dataset](https://cocodataset.org/)

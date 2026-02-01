@@ -39,6 +39,12 @@ The output is a quantized score for each class. To get the predicted class, find
 | `tfhub_tf1_popular_us_products_ptq_fc_split.tflite` | Standard TFLite model (CPU) |
 | `tfhub_tf1_popular_us_products_ptq_fc_split_edgetpu.tflite` | Edge TPU compiled model (Coral) |
 
+## Labels
+
+No label file is included. The 100,000 output class indices correspond to Google's internal product taxonomy (Google Product Dataset). Inspect the output scores to identify top predictions by index.
+
+For more information, see the [model page on Kaggle](https://www.kaggle.com/models/google/popular-us-products-v1).
+
 ## Example: Image Classification
 
 ```python
@@ -104,5 +110,6 @@ Latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
+- [Popular US Products Model on Kaggle](https://www.kaggle.com/models/google/popular-us-products-v1)
 - [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

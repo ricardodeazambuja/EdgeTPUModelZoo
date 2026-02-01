@@ -118,6 +118,7 @@ Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
+- [ResNet-50 on TensorFlow Hub](https://tfhub.dev/tensorflow/resnet_50/classification/1)
 - He, K. et al., "Deep Residual Learning for Image Recognition" ([arXiv:1512.03385](https://arxiv.org/abs/1512.03385))
 - [ImageNet Dataset](https://www.image-net.org/)
 - [Coral Models Page](https://coral.ai/models/all/)

@@ -160,7 +160,7 @@ Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
-- Liu, W. et al., "SSD: Single Shot MultiBox Detector" ([arXiv:1512.02325](https://arxiv.org/abs/1512.02325))
+- [SSD MobileNet V2 on Kaggle](https://www.kaggle.com/models/tensorflow/ssd-mobilenet-v2/tfLite)
 - Sandler, M. et al., "MobileNetV2: Inverted Residuals and Linear Bottlenecks" ([arXiv:1801.04381](https://arxiv.org/abs/1801.04381))
 - [COCO Dataset](https://cocodataset.org/)
 - [Coral Models Page](https://coral.ai/models/all/)

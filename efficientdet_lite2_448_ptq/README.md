@@ -158,6 +158,7 @@ Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
+- [EfficientDet on Kaggle](https://www.kaggle.com/models/tensorflow/efficientdet/tfLite)
 - Tan, M. et al., "EfficientDet: Scalable and Efficient Object Detection" ([arXiv:1911.09070](https://arxiv.org/abs/1911.09070))
 - [COCO Dataset](https://cocodataset.org/)
 - [Coral Models Page](https://coral.ai/models/all/)

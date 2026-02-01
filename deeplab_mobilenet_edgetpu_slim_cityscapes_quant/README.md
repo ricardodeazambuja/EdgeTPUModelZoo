@@ -145,7 +145,8 @@ Latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
-- Chen, L.-C. et al., "Rethinking Atrous Convolution for Semantic Image Segmentation" ([arXiv:1706.05587](https://arxiv.org/abs/1706.05587))
+- [DeepLab on Kaggle](https://www.kaggle.com/models/tensorflow/deeplabv3/tfLite)
+- Chen, L.-C. et al., "Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation" ([arXiv:1802.02611](https://arxiv.org/abs/1802.02611))
 - [EfficientNet-EdgeTPU: Creating Accelerator-Optimized Neural Networks with AutoML](https://research.google/blog/efficientnet-edgetpu-creating-accelerator-optimized-neural-networks-with-automl/) (Google AI Blog)
 - [Cityscapes Dataset](https://www.cityscapes-dataset.com/)
 - [Coral Models Page](https://coral.ai/models/all/)

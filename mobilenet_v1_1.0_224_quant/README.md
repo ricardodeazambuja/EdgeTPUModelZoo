@@ -118,6 +118,7 @@ Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
+- [MobileNet V1 on Kaggle](https://www.kaggle.com/models/google/mobilenet-v1/tfLite)
 - Howard, A. G. et al., "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" ([arXiv:1704.04861](https://arxiv.org/abs/1704.04861))
 - [ImageNet Dataset](https://www.image-net.org/)
 - [Coral Models Page](https://coral.ai/models/all/)
