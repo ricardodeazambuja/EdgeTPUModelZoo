@@ -148,8 +148,18 @@ for i in range(count):
 image.save("output_detections.jpg")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | 5.2 ms |
+| Model Size (Edge TPU) | 6.4 MB |
+
+Latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Liu, W. et al., "SSD: Single Shot MultiBox Detector" ([arXiv:1512.02325](https://arxiv.org/abs/1512.02325))
+- Sandler, M. et al., "MobileNetV2: Inverted Residuals and Linear Bottlenecks" ([arXiv:1801.04381](https://arxiv.org/abs/1801.04381))
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)
-- [COCO Dataset](https://cocodataset.org/)

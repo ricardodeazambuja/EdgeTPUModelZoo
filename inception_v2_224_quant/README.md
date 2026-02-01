@@ -107,7 +107,18 @@ for i, idx in enumerate(top_indices):
     print(f"  {i+1}. {label}: {scores[idx]}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | N/A |
+| Model Size (Edge TPU) | 13 MB |
+
+This variant is not listed on the Coral Models page.
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Ioffe, S. and Szegedy, C., "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift" ([arXiv:1502.03167](https://arxiv.org/abs/1502.03167))
+- [ImageNet Dataset](https://www.image-net.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

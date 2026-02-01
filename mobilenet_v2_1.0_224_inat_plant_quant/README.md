@@ -107,7 +107,19 @@ for i, idx in enumerate(top_indices):
     print(f"  {i+1}. {label}: {scores[idx]}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | 2.6 ms |
+| Model Size (Edge TPU) | 5.5 MB |
+
+Latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Sandler, M. et al., "MobileNetV2: Inverted Residuals and Linear Bottlenecks" ([arXiv:1801.04381](https://arxiv.org/abs/1801.04381))
+- Van Horn, G. et al., "The iNaturalist Species Classification and Detection Dataset" ([CVPR 2018](https://openaccess.thecvf.com/content_cvpr_2018/papers/Van_Horn_The_INaturalist_Species_CVPR_2018_paper.pdf))
+- [iNaturalist 2017 Competition](https://github.com/visipedia/inat_comp/tree/master/2017)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

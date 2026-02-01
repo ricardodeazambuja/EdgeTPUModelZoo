@@ -148,8 +148,18 @@ for i in range(count):
 image.save("output_detections.jpg")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Model Size (Edge TPU) | 6.4 MB |
+
+Performance data from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Liu, W. et al., "SSD: Single Shot MultiBox Detector" ([arXiv:1512.02325](https://arxiv.org/abs/1512.02325))
+- Howard, A. G. et al., "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" ([arXiv:1704.04861](https://arxiv.org/abs/1704.04861))
+- [Oxford-IIIT Pet Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)
-- [COCO Dataset](https://cocodataset.org/)

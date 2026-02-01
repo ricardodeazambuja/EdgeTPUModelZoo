@@ -98,8 +98,14 @@ scores = interpreter.get_tensor(output_details[0]["index"]).flatten()
 print(f"Predicted digit: {np.argmax(scores)}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Model Size (Edge TPU) | 137 KB |
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
 - [MNIST Database](http://yann.lecun.com/exdb/mnist/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

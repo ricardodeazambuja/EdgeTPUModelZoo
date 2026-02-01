@@ -107,7 +107,21 @@ for i, idx in enumerate(top_indices):
     print(f"  {i+1}. {label}: {scores[idx]}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Top-1 Accuracy (ImageNet) | 77.5% |
+| Top-5 Accuracy (ImageNet) | 93.6% |
+| Edge TPU Latency | 3.0 ms |
+| Model Size (Edge TPU) | 5.1 MB |
+
+Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Howard, A. et al., "Searching for MobileNetV3" ([arXiv:1905.02244](https://arxiv.org/abs/1905.02244))
+- [EfficientNet-EdgeTPU: Creating Accelerator-Optimized Neural Networks with AutoML](https://research.google/blog/efficientnet-edgetpu-creating-accelerator-optimized-neural-networks-with-automl/) (Google AI Blog)
+- [ImageNet Dataset](https://www.image-net.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

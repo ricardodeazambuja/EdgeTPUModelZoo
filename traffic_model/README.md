@@ -99,8 +99,14 @@ while cap.isOpened():
 cap.release()
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Model Size (Edge TPU) | 4.4 MB |
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
 - [AutoML Video Intelligence](https://cloud.google.com/video-intelligence/automl/docs)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

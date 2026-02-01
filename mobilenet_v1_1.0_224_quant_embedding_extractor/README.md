@@ -110,8 +110,19 @@ best_class = max(class_embeddings, key=lambda c: cosine_similarity(query_emb, cl
 print(f"Predicted class: {best_class}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | ~2.8 ms |
+| Model Size (Edge TPU) | 3.4 MB |
+
+Latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Howard, A. G. et al., "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" ([arXiv:1704.04861](https://arxiv.org/abs/1704.04861))
 - [On-device Transfer Learning (Coral)](https://coral.ai/docs/edgetpu/retrain/#on-devicetransferlearning)
+- [ImageNet Dataset](https://www.image-net.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

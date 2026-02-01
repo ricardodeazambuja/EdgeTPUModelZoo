@@ -136,7 +136,19 @@ print("Segmentation mask shape:", seg_map.shape)
 print("Unique classes:", np.unique(seg_map))
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | 36.8 ms |
+| Model Size (Edge TPU) | 1.1 MB |
+
+Latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Chen, L.-C. et al., "Rethinking Atrous Convolution for Semantic Image Segmentation" ([arXiv:1706.05587](https://arxiv.org/abs/1706.05587))
+- Sandler, M. et al., "MobileNetV2: Inverted Residuals and Linear Bottlenecks" ([arXiv:1801.04381](https://arxiv.org/abs/1801.04381))
+- [Pascal VOC 2012 Dataset](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

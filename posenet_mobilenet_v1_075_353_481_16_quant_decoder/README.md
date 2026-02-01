@@ -3,7 +3,7 @@
 **Task:** Pose Estimation (single person)
 **Input:** `uint8` tensor of shape `[1, 353, 481, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
 **Output:** Decoded keypoints — 17 body keypoints with `[y, x, score]` coordinates
-**Dataset:** Proprietary
+**Dataset:** COCO Keypoints
 **Quantization:** Full integer (uint8 input and output)
 
 ## Description
@@ -127,8 +127,19 @@ if raw_output.size >= 51:
     image.save("output_pose.jpg")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | 5.8 ms |
+| Model Size (Edge TPU) | 1.6 MB |
+
+Latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
-- [PoseNet on TensorFlow.js](https://github.com/tensorflow/tfjs-models/tree/master/posenet)
+- Papandreou, G. et al., "PersonLab: Person Pose Estimation and Instance Segmentation with a Bottom-Up, Part-Based, Geometric Embedding Model" ([arXiv:1803.08225](https://arxiv.org/abs/1803.08225))
+- Howard, A. G. et al., "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" ([arXiv:1704.04861](https://arxiv.org/abs/1704.04861))
+- [COCO Keypoints Dataset](https://cocodataset.org/#keypoints-2020)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

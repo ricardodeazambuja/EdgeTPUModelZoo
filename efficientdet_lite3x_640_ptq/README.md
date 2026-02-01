@@ -148,8 +148,19 @@ for i in range(count):
 image.save("output_detections.jpg")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| mAP (COCO 2017) | 43.9% |
+| Edge TPU Latency | 197.0 ms |
+| Model Size (Edge TPU) | 20 MB |
+
+Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
-- [PyCoral API Reference](https://coral.ai/docs/reference/py/)
+- Tan, M. et al., "EfficientDet: Scalable and Efficient Object Detection" ([arXiv:1911.09070](https://arxiv.org/abs/1911.09070))
 - [COCO Dataset](https://cocodataset.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
+- [PyCoral API Reference](https://coral.ai/docs/reference/py/)

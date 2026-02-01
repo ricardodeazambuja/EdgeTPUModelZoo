@@ -107,7 +107,20 @@ for i, idx in enumerate(top_indices):
     print(f"  {i+1}. {label}: {scores[idx]}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Top-1 Accuracy (ImageNet) | ~69.5% |
+| Top-5 Accuracy (ImageNet) | ~90.6% |
+| Edge TPU Latency | ~2.8 ms |
+| Model Size (Edge TPU) | 5.4 MB |
+
+Base model accuracy from the [Coral Models page](https://coral.ai/models/all/). L2 normalization does not affect accuracy.
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Howard, A. G. et al., "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" ([arXiv:1704.04861](https://arxiv.org/abs/1704.04861))
+- [ImageNet Dataset](https://www.image-net.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

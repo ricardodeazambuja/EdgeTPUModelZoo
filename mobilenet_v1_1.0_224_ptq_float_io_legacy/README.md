@@ -1,36 +1,34 @@
 # MobileNet V1 (Float I/O, Legacy)
 
 **Task:** Image Classification
-**Input:** `uint8` tensor of shape `[1, 224, 224, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
-**Output:** `uint8` tensor of shape `[1, 1000]` — quantized class scores for each of the 1000 categories
+**Input:** `float32` tensor of shape `[1, 224, 224, 3]` (batch, height, width, RGB channels), values in `[0.0, 1.0]`
+**Output:** `float32` tensor of shape `[1, 1000]` — class probabilities for each of the 1000 categories
 **Dataset:** ImageNet
-**Quantization:** Full integer (uint8 input and output)
+**Quantization:** Hybrid (float32 input/output, int8 internal operations)
 
 ## Description
 
 MobileNet V1 (alpha=1.0, 224x224) with float32 input/output tensors. Internal operations are quantized to int8. 1000 ImageNet categories.
-
-**Note:** This variant uses `float32` input/output while internal ops are int8. Input values should be in `[0.0, 1.0]` (normalized) rather than `[0, 255]`. Check `input_details[0]['dtype']` at runtime.
 
 ## Input Details
 
 | Property | Value |
 |----------|-------|
 | Shape | `[1, 224, 224, 3]` |
-| Type | `uint8` |
-| Range | `[0, 255]` |
+| Type | `float32` |
+| Range | `[0.0, 1.0]` |
 | Color format | RGB |
-| Preprocessing | Resize to 224x224, no normalization needed (quantized model) |
+| Preprocessing | Resize to 224x224, normalize pixel values to [0.0, 1.0] by dividing by 255.0 |
 
 ## Output Details
 
 | Property | Value |
 |----------|-------|
 | Shape | `[1, 1000]` |
-| Type | `uint8` |
-| Interpretation | Higher value = higher confidence for that class |
+| Type | `float32` |
+| Interpretation | Class probabilities; highest value = most likely class |
 
-The output is a quantized score for each class. To get the predicted class, find the index with the highest value and look it up in the labels file.
+The output is a probability score for each class. To get the predicted class, find the index with the highest value and look it up in the labels file.
 
 ## Files
 
@@ -59,9 +57,9 @@ with open("imagenet_labels.txt", "r") as f:
 interpreter = make_interpreter("mobilenet_v1_1.0_224_ptq_float_io_legacy_edgetpu.tflite")
 interpreter.allocate_tensors()
 
-# Prepare image: resize to 224x224 and convert to uint8 RGB
+# Prepare image: resize to 224x224 and normalize to float32 [0.0, 1.0]
 image = Image.open("your_image.jpg").convert("RGB").resize((224, 224))
-input_data = np.expand_dims(np.asarray(image, dtype=np.uint8), axis=0)
+input_data = np.expand_dims(np.asarray(image, dtype=np.float32) / 255.0, axis=0)
 
 # Run inference
 common.set_input(interpreter, input_data)
@@ -95,7 +93,7 @@ input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
 image = Image.open("your_image.jpg").convert("RGB").resize((224, 224))
-input_data = np.expand_dims(np.asarray(image, dtype=np.uint8), axis=0)
+input_data = np.expand_dims(np.asarray(image, dtype=np.float32) / 255.0, axis=0)
 
 interpreter.set_tensor(input_details[0]["index"], input_data)
 interpreter.invoke()
@@ -107,7 +105,20 @@ for i, idx in enumerate(top_indices):
     print(f"  {i+1}. {label}: {scores[idx]}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Top-1 Accuracy (ImageNet) | ~69.5% |
+| Top-5 Accuracy (ImageNet) | ~90.6% |
+| Edge TPU Latency | 2.8 ms |
+| Model Size (Edge TPU) | 4.7 MB |
+
+Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Howard, A. G. et al., "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" ([arXiv:1704.04861](https://arxiv.org/abs/1704.04861))
+- [ImageNet Dataset](https://www.image-net.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

@@ -39,6 +39,10 @@ The output is a quantized score for each class. To get the predicted class, find
 | `tfhub_tf1_popular_us_products_ptq.tflite` | Standard TFLite model (CPU) |
 | `tfhub_tf1_popular_us_products_ptq_edgetpu.tflite` | Edge TPU compiled model (Coral) |
 
+## Labels
+
+This model recognizes approximately 100,000 US consumer product categories. No label file is included — the output class indices correspond to Google's internal product taxonomy. Inspect the output scores to identify top predictions by index.
+
 ## Example: Image Classification
 
 ```python
@@ -62,11 +66,10 @@ interpreter.invoke()
 # Get classification results
 scores = common.output_tensor(interpreter, 0).flatten()
 
-# Get top-5 predictions
+# Get top-5 predictions (no label file provided; results are class indices)
 top_indices = np.argsort(scores)[::-1][:5]
 for i, idx in enumerate(top_indices):
-    label = labels[idx] if labels else str(idx)
-    print(f"  {i+1}. {label}: {scores[idx]}")
+    print(f"  {i+1}. Class index {idx}: score {scores[idx]}")
 ```
 
 ### CPU-only version (without Edge TPU)
@@ -91,11 +94,19 @@ interpreter.invoke()
 scores = interpreter.get_tensor(output_details[0]["index"]).flatten()
 top_indices = np.argsort(scores)[::-1][:5]
 for i, idx in enumerate(top_indices):
-    label = labels[idx] if labels else str(idx)
-    print(f"  {i+1}. {label}: {scores[idx]}")
+    print(f"  {i+1}. Class index {idx}: score {scores[idx]}")
 ```
+
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | 7.0 ms |
+| Model Size (Edge TPU) | 9.3 MB |
+
+Latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

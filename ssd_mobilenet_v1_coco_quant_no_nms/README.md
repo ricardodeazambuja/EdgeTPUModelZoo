@@ -141,7 +141,20 @@ for class_id in range(raw_scores.shape[1]):
 image.save("output_detections.jpg")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| mAP (COCO) | 21.5% |
+| Edge TPU Latency | 6.5 ms |
+| Model Size (Edge TPU) | 7.1 MB |
+
+Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/). Note: mAP may differ with custom NMS parameters.
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Liu, W. et al., "SSD: Single Shot MultiBox Detector" ([arXiv:1512.02325](https://arxiv.org/abs/1512.02325))
+- Howard, A. G. et al., "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" ([arXiv:1704.04861](https://arxiv.org/abs/1704.04861))
+- [COCO Dataset](https://cocodataset.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

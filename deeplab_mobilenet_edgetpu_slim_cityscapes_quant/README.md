@@ -30,7 +30,7 @@ Designed specifically for Edge TPU with the MobileNet EdgeTPU Slim backbone for 
 | Type | `int64` or `uint8` |
 | Interpretation | Each pixel value is a class index (0 to 18) |
 
-The output is a 2D segmentation mask where each pixel is assigned a class label. Class 0 is typically "background".
+The output is a 2D segmentation mask where each pixel is assigned a class label. In the Cityscapes label scheme, class 0 corresponds to "road".
 
 ## Files
 
@@ -59,7 +59,7 @@ print("Classes:", labels)
 # Generate a color palette (one color per class)
 np.random.seed(42)
 palette = np.random.randint(0, 255, size=(19, 3), dtype=np.uint8)
-palette[0] = [0, 0, 0]  # Background = black
+palette[0] = [128, 64, 128]  # Road (Cityscapes standard color)
 
 # Load model
 interpreter = make_interpreter("deeplab_mobilenet_edgetpu_slim_cityscapes_quant_edgetpu.tflite")
@@ -136,7 +136,19 @@ print("Segmentation mask shape:", seg_map.shape)
 print("Unique classes:", np.unique(seg_map))
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | 65.9 ms |
+| Model Size (Edge TPU) | 3.0 MB |
+
+Latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Chen, L.-C. et al., "Rethinking Atrous Convolution for Semantic Image Segmentation" ([arXiv:1706.05587](https://arxiv.org/abs/1706.05587))
+- [EfficientNet-EdgeTPU: Creating Accelerator-Optimized Neural Networks with AutoML](https://research.google/blog/efficientnet-edgetpu-creating-accelerator-optimized-neural-networks-with-automl/) (Google AI Blog)
+- [Cityscapes Dataset](https://www.cityscapes-dataset.com/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

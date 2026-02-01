@@ -3,7 +3,7 @@
 **Task:** Body Segmentation (person and body-part level)
 **Input:** `uint8` tensor of shape `[1, 512, 512, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
 **Output:** Body part segmentation mask — each pixel assigned to a body part or background
-**Dataset:** Proprietary
+**Dataset:** COCO + synthetic rendered data
 **Quantization:** Full integer (uint8 input and output)
 
 ## Description
@@ -114,8 +114,20 @@ person_image.save("output_person_mask.jpg")
 print("Detected body parts:", np.unique(seg_map))
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | 10.7 ms |
+| Model Size (Edge TPU) | 1.6 MB |
+
+Latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
-- [BodyPix on TensorFlow.js](https://github.com/tensorflow/tfjs-models/tree/master/body-pix)
+- [Updated BodyPix 2.0: Real-time Person Segmentation in the Browser with TensorFlow.js](https://blog.tensorflow.org/2019/11/updated-bodypix-2.html) (TensorFlow Blog)
+- Howard, A. G. et al., "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" ([arXiv:1704.04861](https://arxiv.org/abs/1704.04861))
+- [COCO Dataset](https://cocodataset.org/)
+- [Coral BodyPix Project](https://github.com/google-coral/project-bodypix)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

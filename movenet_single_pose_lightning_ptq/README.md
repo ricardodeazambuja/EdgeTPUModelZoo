@@ -3,7 +3,7 @@
 **Task:** Pose Estimation (single person)
 **Input:** `uint8` tensor of shape `[1, 192, 192, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
 **Output:** `float32` tensor of shape `[1, 1, 17, 3]` — 17 keypoints, each with `[y, x, confidence]`
-**Dataset:** Proprietary
+**Dataset:** COCO Keypoints + Google internal Active dataset
 **Quantization:** Full integer (uint8 input and output)
 
 ## Description
@@ -145,8 +145,20 @@ for i, (y, x, conf) in enumerate(keypoints):
         print(f"  Keypoint {i}: y={y:.3f}, x={x:.3f}, confidence={conf:.2f}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | 7.1 ms |
+| Model Size (Edge TPU) | 3.0 MB |
+
+Latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- [Next-Generation Pose Detection with MoveNet and TensorFlow.js](https://blog.tensorflow.org/2021/05/next-generation-pose-detection-with-movenet-and-tensorflowjs.html) (TensorFlow Blog)
+- [Pose Estimation and Classification on Edge Devices with MoveNet and TensorFlow Lite](https://blog.tensorflow.org/2021/08/pose-estimation-and-classification-on-edge-devices-with-MoveNet-and-TensorFlow-Lite.html) (TensorFlow Blog)
 - [MoveNet on TF Hub](https://tfhub.dev/google/movenet/)
+- [COCO Keypoints Dataset](https://cocodataset.org/#keypoints-2020)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

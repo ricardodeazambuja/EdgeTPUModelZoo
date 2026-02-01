@@ -107,7 +107,20 @@ for i, idx in enumerate(top_indices):
     print(f"  {i+1}. {label}: {scores[idx]}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Top-1 Accuracy (ImageNet) | 73.6% |
+| Top-5 Accuracy (ImageNet) | 93.8% |
+| Edge TPU Latency | 42.2 ms |
+| Model Size (Edge TPU) | 26 MB |
+
+Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- He, K. et al., "Deep Residual Learning for Image Recognition" ([arXiv:1512.03385](https://arxiv.org/abs/1512.03385))
+- [ImageNet Dataset](https://www.image-net.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

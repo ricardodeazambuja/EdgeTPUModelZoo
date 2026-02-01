@@ -104,8 +104,18 @@ overlay = Image.blend(image, mask_image, alpha=0.5)
 overlay.save("output_segmentation.jpg")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Edge TPU Latency | 2.7 ms |
+| Model Size (Edge TPU) | 6.9 MB |
+
+Latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
-- [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
+- Ronneberger, O. et al., "U-Net: Convolutional Networks for Biomedical Image Segmentation" ([arXiv:1505.04597](https://arxiv.org/abs/1505.04597))
+- Sandler, M. et al., "MobileNetV2: Inverted Residuals and Linear Bottlenecks" ([arXiv:1801.04381](https://arxiv.org/abs/1801.04381))
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

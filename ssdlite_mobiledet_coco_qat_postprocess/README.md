@@ -148,8 +148,20 @@ for i in range(count):
 image.save("output_detections.jpg")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| mAP (COCO) | 32.9% |
+| Edge TPU Latency | 9.1 ms |
+| Model Size (Edge TPU) | 5.2 MB |
+
+Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
-- [PyCoral API Reference](https://coral.ai/docs/reference/py/)
+- Xiong, Y. et al., "MobileDets: Searching for Object Detection Architectures for Mobile Accelerators" ([arXiv:2004.14525](https://arxiv.org/abs/2004.14525))
+- Liu, W. et al., "SSD: Single Shot MultiBox Detector" ([arXiv:1512.02325](https://arxiv.org/abs/1512.02325))
 - [COCO Dataset](https://cocodataset.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
+- [PyCoral API Reference](https://coral.ai/docs/reference/py/)

@@ -107,7 +107,20 @@ for i, idx in enumerate(top_indices):
     print(f"  {i+1}. {label}: {scores[idx]}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Top-1 Accuracy (ImageNet) | 71.9% |
+| Top-5 Accuracy (ImageNet) | 92.0% |
+| Edge TPU Latency | 3.4 ms |
+| Model Size (Edge TPU) | 7.1 MB |
+
+Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Szegedy, C. et al., "Going Deeper with Convolutions" ([arXiv:1409.4842](https://arxiv.org/abs/1409.4842))
+- [ImageNet Dataset](https://www.image-net.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)

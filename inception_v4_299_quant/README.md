@@ -107,7 +107,20 @@ for i, idx in enumerate(top_indices):
     print(f"  {i+1}. {label}: {scores[idx]}")
 ```
 
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Top-1 Accuracy (ImageNet) | 80.7% |
+| Top-5 Accuracy (ImageNet) | 95.5% |
+| Edge TPU Latency | 84.7 ms |
+| Model Size (Edge TPU) | 43 MB |
+
+Accuracy and latency from the [Coral Models page](https://coral.ai/models/all/).
+
 ## References
 
-- [Google Coral Documentation](https://coral.ai/docs/)
+- Szegedy, C. et al., "Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning" ([arXiv:1602.07261](https://arxiv.org/abs/1602.07261))
+- [ImageNet Dataset](https://www.image-net.org/)
+- [Coral Models Page](https://coral.ai/models/all/)
 - [PyCoral API Reference](https://coral.ai/docs/reference/py/)
