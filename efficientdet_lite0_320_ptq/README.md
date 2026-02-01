@@ -10,8 +10,6 @@
 
 EfficientDet-Lite0 object detection model. Smallest and fastest Lite variant. Detects 90 COCO object categories with bounding boxes and confidence scores.
 
-Best for latency-critical applications where some accuracy can be traded for speed.
-
 ## Input Details
 
 | Property | Value |
@@ -33,7 +31,7 @@ This model includes built-in Non-Maximum Suppression (NMS). It produces **4 outp
 | 2 | Confidence scores | `[1, N]` | `float32` | Confidence score for each detection, range `[0.0, 1.0]` |
 | 3 | Detection count | `[1]` | `float32` | Number of valid detections |
 
-Where `N` is the maximum number of detections (typically 25).
+Where `N` is the maximum number of detections (25).
 
 **Important:** Bounding box coordinates are normalized. Multiply by the original image dimensions to get pixel coordinates.
 

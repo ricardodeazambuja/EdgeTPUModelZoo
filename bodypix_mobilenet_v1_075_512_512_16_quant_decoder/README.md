@@ -35,18 +35,18 @@ BodyPix body part IDs (when the model outputs per-pixel part segmentation):
 
 | ID | Body Part | ID | Body Part |
 |----|-----------|----|-----------|
-| 0 | Left face | 12 | Left lower arm (front) |
-| 1 | Right face | 13 | Right lower arm (front) |
-| 2 | Left upper arm (front) | 14 | Left hand |
-| 3 | Right upper arm (front) | 15 | Right hand |
-| 4 | Left lower arm (front) | 16 | Left upper leg (front) |
-| 5 | Right lower arm (front) | 17 | Right upper leg (front) |
-| 6 | Left upper arm (back) | 18 | Left lower leg (front) |
-| 7 | Right upper arm (back) | 19 | Right lower leg (front) |
-| 8 | Left lower arm (back) | 20 | Left foot |
-| 9 | Right lower arm (back) | 21 | Right foot |
-| 10 | Torso (front) | 22 | Left upper leg (back) |
-| 11 | Torso (back) | 23 | Right upper leg (back) |
+| 0 | Left face | 12 | Left upper leg (front) |
+| 1 | Right face | 13 | Right upper leg (front) |
+| 2 | Left upper arm (front) | 14 | Left lower leg (front) |
+| 3 | Right upper arm (front) | 15 | Right lower leg (front) |
+| 4 | Left lower arm (front) | 16 | Left foot |
+| 5 | Right lower arm (front) | 17 | Right foot |
+| 6 | Left upper arm (back) | 18 | Left upper leg (back) |
+| 7 | Right upper arm (back) | 19 | Right upper leg (back) |
+| 8 | Left lower arm (back) | 20 | Left lower leg (back) |
+| 9 | Right lower arm (back) | 21 | Right lower leg (back) |
+| 10 | Torso (front) | 22 | Left hand |
+| 11 | Torso (back) | 23 | Right hand |
 
 ## Files
 

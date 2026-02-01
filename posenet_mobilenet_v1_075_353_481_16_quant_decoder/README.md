@@ -138,7 +138,7 @@ Latency from the [Coral Models page](https://coral.ai/models/all/).
 
 ## References
 
-- Papandreou, G. et al., "PersonLab: Person Pose Estimation and Instance Segmentation with a Bottom-Up, Part-Based, Geometric Embedding Model" ([arXiv:1803.08225](https://arxiv.org/abs/1803.08225))
+- Papandreou, G. et al., "Towards Accurate Multi-person Pose Estimation in the Wild" ([arXiv:1701.01779](https://arxiv.org/abs/1701.01779))
 - Howard, A. G. et al., "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" ([arXiv:1704.04861](https://arxiv.org/abs/1704.04861))
 - [COCO Keypoints Dataset](https://cocodataset.org/#keypoints-2020)
 - [Coral Models Page](https://coral.ai/models/all/)

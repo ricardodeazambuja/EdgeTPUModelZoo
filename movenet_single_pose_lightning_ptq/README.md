@@ -10,8 +10,6 @@
 
 MoveNet Lightning for single-person pose estimation. Detects 17 body keypoints (nose, eyes, ears, shoulders, elbows, wrists, hips, knees, ankles).
 
-Lightning is the faster variant, designed for latency-critical applications like real-time tracking.
-
 ## Input Details
 
 | Property | Value |

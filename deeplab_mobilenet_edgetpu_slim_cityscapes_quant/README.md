@@ -10,8 +10,6 @@
 
 DeepLab semantic segmentation model with a MobileNet EdgeTPU Slim backbone, trained on the Cityscapes dataset for urban scene parsing. Classifies each pixel into 19 classes: road, sidewalk, building, wall, fence, pole, traffic light, traffic sign, vegetation, terrain, sky, person, rider, car, truck, bus, train, motorcycle, bicycle.
 
-Designed specifically for Edge TPU with the MobileNet EdgeTPU Slim backbone for fast inference on urban driving scenes.
-
 ## Input Details
 
 | Property | Value |

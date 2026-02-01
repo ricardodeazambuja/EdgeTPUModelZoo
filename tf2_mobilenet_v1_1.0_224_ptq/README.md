@@ -10,8 +10,6 @@
 
 MobileNet V1 trained with TensorFlow 2 and post-training quantized. 1000 ImageNet categories.
 
-TF2-trained version with updated training techniques.
-
 ## Input Details
 
 | Property | Value |

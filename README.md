@@ -47,19 +47,19 @@ A curated collection of pre-trained, quantized TFLite models compiled for the [G
 | [DeepLab MobileNet EdgeTPU Slim (Cityscapes)](./deeplab_mobilenet_edgetpu_slim_cityscapes_quant/) | Semantic Segmentation | 513x513 | Cityscapes | N/A | 65.9 ms |
 | [DeepLabV3 MobileNetV2 DM=0.5 (Pascal VOC)](./deeplabv3_mnv2_dm05_pascal_quant/) | Semantic Segmentation | 513x513 | Pascal VOC 2012 | N/A | 36.8 ms |
 | [DeepLabV3 MobileNetV2 (Pascal VOC)](./deeplabv3_mnv2_pascal_quant/) | Semantic Segmentation | 513x513 | Pascal VOC 2012 | N/A | 43.0 ms |
-| [U-Net MobileNetV2 (128x128)](./keras_post_training_unet_mv2_128_quant/) | Semantic Segmentation | 128x128 | Custom | N/A | 2.7 ms |
-| [U-Net MobileNetV2 (256x256)](./keras_post_training_unet_mv2_256_quant/) | Semantic Segmentation | 256x256 | Custom | N/A | 29.0 ms |
+| [U-Net MobileNetV2 (128x128)](./keras_post_training_unet_mv2_128_quant/) | Semantic Segmentation | 128x128 | Oxford-IIIT Pet | N/A | 2.7 ms |
+| [U-Net MobileNetV2 (256x256)](./keras_post_training_unet_mv2_256_quant/) | Semantic Segmentation | 256x256 | Oxford-IIIT Pet | N/A | 29.0 ms |
 | [MoveNet Lightning (Single Pose)](./movenet_single_pose_lightning_ptq/) | Pose Estimation | 192x192 | COCO Keypoints | N/A | 7.1 ms |
 | [MoveNet Thunder (Single Pose)](./movenet_single_pose_thunder_ptq/) | Pose Estimation | 256x256 | COCO Keypoints | N/A | 13.8 ms |
 | [PoseNet MobileNet V1 (353x481)](./posenet_mobilenet_v1_075_353_481_16_quant_decoder/) | Pose Estimation | 353x481 | COCO Keypoints | N/A | 5.8 ms |
 | [PoseNet MobileNet V1 (481x641)](./posenet_mobilenet_v1_075_481_641_16_quant_decoder/) | Pose Estimation | 481x641 | COCO Keypoints | N/A | 10.3 ms |
 | [PoseNet MobileNet V1 (721x1281)](./posenet_mobilenet_v1_075_721_1281_16_quant_decoder/) | Pose Estimation | 721x1281 | COCO Keypoints | N/A | 32.4 ms |
 | [BodyPix MobileNet V1 (512x512)](./bodypix_mobilenet_v1_075_512_512_16_quant_decoder/) | Body Segmentation | 512x512 | COCO + synthetic | N/A | 10.7 ms |
-| [EfficientNet-EdgeTPU Small Embedding Extractor](./efficientnet-edgetpu-S_quant_embedding_extractor/) | Feature Extraction | 224x224 | ImageNet | N/A | ~5.0 ms |
-| [EfficientNet-EdgeTPU Medium Embedding Extractor](./efficientnet-edgetpu-M_quant_embedding_extractor/) | Feature Extraction | 240x240 | ImageNet | N/A | ~7.3 ms |
-| [EfficientNet-EdgeTPU Large Embedding Extractor](./efficientnet-edgetpu-L_quant_embedding_extractor/) | Feature Extraction | 300x300 | ImageNet | N/A | ~21.3 ms |
-| [MobileNet V1 Embedding Extractor](./mobilenet_v1_1.0_224_quant_embedding_extractor/) | Feature Extraction | 224x224 | ImageNet | N/A | ~2.8 ms |
-| [AutoML Video Traffic Model](./traffic_model/) | Video Classification | Variable | Custom (Traffic) | N/A | N/A |
+| [EfficientNet-EdgeTPU Small Embedding Extractor](./efficientnet-edgetpu-S_quant_embedding_extractor/) | Feature Extraction | 224x224 | ImageNet | N/A | 5.0 ms |
+| [EfficientNet-EdgeTPU Medium Embedding Extractor](./efficientnet-edgetpu-M_quant_embedding_extractor/) | Feature Extraction | 240x240 | ImageNet | N/A | 7.3 ms |
+| [EfficientNet-EdgeTPU Large Embedding Extractor](./efficientnet-edgetpu-L_quant_embedding_extractor/) | Feature Extraction | 300x300 | ImageNet | N/A | 21.3 ms |
+| [MobileNet V1 Embedding Extractor](./mobilenet_v1_1.0_224_quant_embedding_extractor/) | Feature Extraction | 224x224 | ImageNet | N/A | 2.8 ms |
+| [AutoML Video Traffic Model](./traffic_model/) | Video Object Detection | 256x256 | Custom (Traffic) | N/A | N/A |
 
 ## Quick Start
 
@@ -128,8 +128,8 @@ Models that output feature embedding vectors instead of classification scores. U
 ### Sequence Classification
 Models that process sequential data (e.g., image rows as sequences) using recurrent architectures.
 
-### Video Classification
-Models designed for classifying video content frame by frame.
+### Video Object Detection
+Models that detect objects in video frames while maintaining temporal state across frames.
 
 ## Accuracy and Performance
 

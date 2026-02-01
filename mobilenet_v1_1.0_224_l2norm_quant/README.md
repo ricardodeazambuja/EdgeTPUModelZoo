@@ -111,9 +111,9 @@ for i, idx in enumerate(top_indices):
 
 | Metric | Value |
 |--------|-------|
-| Top-1 Accuracy (ImageNet) | ~69.5% |
-| Top-5 Accuracy (ImageNet) | ~90.6% |
-| Edge TPU Latency | ~2.8 ms |
+| Top-1 Accuracy (ImageNet) | 69.5% |
+| Top-5 Accuracy (ImageNet) | 90.6% |
+| Edge TPU Latency | 2.8 ms |
 | Model Size (Edge TPU) | 5.4 MB |
 
 Base model accuracy from the [Coral Models page](https://coral.ai/models/all/). L2 normalization does not affect accuracy.

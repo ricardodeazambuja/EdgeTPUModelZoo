@@ -10,8 +10,6 @@
 
 MobileNet V1 with width multiplier 0.5 and 160x160 input. 1000 ImageNet categories.
 
-Mid-range compact variant with half the channels of the full model.
-
 ## Input Details
 
 | Property | Value |

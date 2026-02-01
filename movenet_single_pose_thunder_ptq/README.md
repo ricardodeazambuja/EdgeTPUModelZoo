@@ -10,8 +10,6 @@
 
 MoveNet Thunder for single-person pose estimation. Detects 17 body keypoints with higher accuracy than Lightning.
 
-Thunder is more accurate but slower. Better for applications where precision matters more than speed.
-
 ## Input Details
 
 | Property | Value |

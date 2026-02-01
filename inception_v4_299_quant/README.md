@@ -10,8 +10,6 @@
 
 Inception V4 — the most accurate Inception variant. 1000 ImageNet categories.
 
-Simplified, more uniform architecture compared to V3. Highest accuracy in the Inception family.
-
 ## Input Details
 
 | Property | Value |

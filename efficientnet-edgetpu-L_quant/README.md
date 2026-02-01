@@ -10,8 +10,6 @@
 
 EfficientNet-EdgeTPU Large — a classification model designed and optimized for the Google Coral Edge TPU via neural architecture search (NAS). Classifies images into 1000 ImageNet categories.
 
-Largest and most accurate EfficientNet-EdgeTPU variant. The NAS process specifically targeted Edge TPU hardware, yielding better accuracy-latency tradeoffs than standard EfficientNet.
-
 ## Input Details
 
 | Property | Value |

@@ -2,15 +2,13 @@
 
 **Task:** Image Classification
 **Input:** `uint8` tensor of shape `[1, 224, 224, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
-**Output:** `uint8` tensor of shape `[1, num_bird_classes]` — quantized class scores for each of the num_bird_classes categories
+**Output:** `uint8` tensor of shape `[1, 965]` — quantized class scores for each of the 965 bird species
 **Dataset:** iNaturalist 2017 (Birds)
 **Quantization:** Full integer (uint8 input and output)
 
 ## Description
 
 MobileNet V2 fine-tuned on iNaturalist 2017 for bird species classification.
-
-Identifies hundreds of bird species. Useful for wildlife monitoring and citizen science.
 
 ## Input Details
 
@@ -26,7 +24,7 @@ Identifies hundreds of bird species. Useful for wildlife monitoring and citizen 
 
 | Property | Value |
 |----------|-------|
-| Shape | `[1, num_bird_classes]` |
+| Shape | `[1, 965]` |
 | Type | `uint8` |
 | Interpretation | Higher value = higher confidence for that class |
 

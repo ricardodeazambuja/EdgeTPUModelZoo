@@ -2,7 +2,7 @@
 
 **Task:** Image Classification
 **Input:** `uint8` tensor of shape `[1, 224, 224, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
-**Output:** `uint8` tensor of shape `[1, num_product_classes]` — quantized class scores for each of the num_product_classes categories
+**Output:** `uint8` tensor of shape `[1, 100000]` — quantized class scores for each of the 100,000 product categories
 **Dataset:** Google Product Dataset
 **Quantization:** Full integer (uint8 input and output)
 
@@ -26,7 +26,7 @@ The FC split architecture enables co-compilation with other models on the same E
 
 | Property | Value |
 |----------|-------|
-| Shape | `[1, num_product_classes]` |
+| Shape | `[1, 100000]` |
 | Type | `uint8` |
 | Interpretation | Higher value = higher confidence for that class |
 
@@ -97,7 +97,7 @@ for i, idx in enumerate(top_indices):
 
 | Metric | Value |
 |--------|-------|
-| Edge TPU Latency | ~7.0 ms |
+| Edge TPU Latency | 7.0 ms |
 | Model Size (Edge TPU) | 9.5 MB |
 
 Latency from the [Coral Models page](https://coral.ai/models/all/).

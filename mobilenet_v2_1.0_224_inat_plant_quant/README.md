@@ -2,15 +2,13 @@
 
 **Task:** Image Classification
 **Input:** `uint8` tensor of shape `[1, 224, 224, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
-**Output:** `uint8` tensor of shape `[1, num_plant_classes]` — quantized class scores for each of the num_plant_classes categories
+**Output:** `uint8` tensor of shape `[1, 2102]` — quantized class scores for each of the 2102 plant species
 **Dataset:** iNaturalist 2017 (Plants)
 **Quantization:** Full integer (uint8 input and output)
 
 ## Description
 
 MobileNet V2 fine-tuned on iNaturalist 2017 for plant species classification.
-
-Useful for botany, agriculture, and ecological surveys.
 
 ## Input Details
 
@@ -26,7 +24,7 @@ Useful for botany, agriculture, and ecological surveys.
 
 | Property | Value |
 |----------|-------|
-| Shape | `[1, num_plant_classes]` |
+| Shape | `[1, 2102]` |
 | Type | `uint8` |
 | Interpretation | Higher value = higher confidence for that class |
 

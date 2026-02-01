@@ -2,15 +2,13 @@
 
 **Task:** Image Classification
 **Input:** `uint8` tensor of shape `[1, 224, 224, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
-**Output:** `uint8` tensor of shape `[1, num_product_classes]` — quantized class scores for each of the num_product_classes categories
+**Output:** `uint8` tensor of shape `[1, 100000]` — quantized class scores for each of the 100,000 product categories
 **Dataset:** Google Product Dataset
 **Quantization:** Full integer (uint8 input and output)
 
 ## Description
 
 Product recognition model from TensorFlow Hub. Identifies popular US consumer products from images.
-
-Trained to recognize common US retail products. Useful for inventory management, shopping assistance, and product identification. The number of classes depends on the model version — inspect output shape at runtime.
 
 ## Input Details
 
@@ -26,7 +24,7 @@ Trained to recognize common US retail products. Useful for inventory management,
 
 | Property | Value |
 |----------|-------|
-| Shape | `[1, num_product_classes]` |
+| Shape | `[1, 100000]` |
 | Type | `uint8` |
 | Interpretation | Higher value = higher confidence for that class |
 
@@ -41,7 +39,7 @@ The output is a quantized score for each class. To get the predicted class, find
 
 ## Labels
 
-This model recognizes approximately 100,000 US consumer product categories. No label file is included — the output class indices correspond to Google's internal product taxonomy. Inspect the output scores to identify top predictions by index.
+No label file is included. The 100,000 output class indices correspond to Google's internal product taxonomy. Inspect the output scores to identify top predictions by index.
 
 ## Example: Image Classification
 

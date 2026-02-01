@@ -10,8 +10,6 @@
 
 ResNet-50 from TensorFlow Hub, post-training quantized. 1000 ImageNet categories. ResNet-50 uses residual skip connections with 50 layers.
 
-Higher accuracy than MobileNet models but more computation. Well-known architecture with extensive research backing.
-
 ## Input Details
 
 | Property | Value |

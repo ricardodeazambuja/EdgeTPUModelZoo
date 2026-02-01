@@ -10,8 +10,6 @@
 
 MobileNet V2 full-size model for 1000-class ImageNet classification. Uses inverted residuals and linear bottlenecks.
 
-Improves upon V1 with inverted residual blocks and linear bottleneck layers for better accuracy with similar latency.
-
 ## Input Details
 
 | Property | Value |

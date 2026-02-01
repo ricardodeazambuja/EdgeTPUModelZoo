@@ -10,8 +10,6 @@
 
 EfficientNet-EdgeTPU Small — compact classification model optimized for Edge TPU. 1000 ImageNet categories.
 
-Fastest EfficientNet-EdgeTPU variant, ideal for real-time classification.
-
 ## Input Details
 
 | Property | Value |

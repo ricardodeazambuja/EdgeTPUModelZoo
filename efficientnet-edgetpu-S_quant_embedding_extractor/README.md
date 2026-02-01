@@ -2,15 +2,13 @@
 
 **Task:** Feature Extraction / Embedding
 **Input:** `uint8` tensor of shape `[1, 224, 224, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
-**Output:** `uint8` tensor — 1D feature embedding vector (dimensionality depends on the model architecture)
+**Output:** `uint8` tensor of shape `[1, 1280]` — 1280-dimensional feature embedding vector
 **Dataset:** ImageNet (pre-trained)
 **Quantization:** Full integer (uint8 input and output)
 
 ## Description
 
 Feature extraction variant of EfficientNet-EdgeTPU Small. Fastest embedding extractor optimized for Edge TPU.
-
-Smallest and fastest embedding extractor for real-time feature extraction.
 
 ## Input Details
 
@@ -26,7 +24,7 @@ Smallest and fastest embedding extractor for real-time feature extraction.
 
 | Property | Value |
 |----------|-------|
-| Shape | `[1, D]` where D is the embedding dimension |
+| Shape | `[1, 1280]` |
 | Type | `uint8` (quantized) |
 | Interpretation | Feature embedding vector; similar images produce similar vectors |
 
@@ -114,7 +112,7 @@ print(f"Predicted class: {best_class}")
 
 | Metric | Value |
 |--------|-------|
-| Edge TPU Latency | ~5.0 ms |
+| Edge TPU Latency | 5.0 ms |
 | Model Size (Edge TPU) | 5.5 MB |
 
 Latency from the [Coral Models page](https://coral.ai/models/all/).

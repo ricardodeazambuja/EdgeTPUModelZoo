@@ -10,8 +10,6 @@
 
 EfficientNet-EdgeTPU Medium — mid-range classification model optimized for Edge TPU. 1000 ImageNet categories.
 
-Balances accuracy and speed between the Small and Large variants.
-
 ## Input Details
 
 | Property | Value |

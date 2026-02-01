@@ -10,8 +10,6 @@
 
 MobileNet V1 with width multiplier 0.25 and 128x128 input. Ultra-compact model for 1000-class ImageNet classification.
 
-Smallest MobileNet V1 variant — width multiplier 0.25 reduces channels by 75%. Extremely fast but lower accuracy.
-
 ## Input Details
 
 | Property | Value |

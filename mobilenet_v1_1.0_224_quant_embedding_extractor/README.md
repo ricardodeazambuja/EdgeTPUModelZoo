@@ -2,7 +2,7 @@
 
 **Task:** Feature Extraction / Embedding
 **Input:** `uint8` tensor of shape `[1, 224, 224, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
-**Output:** `uint8` tensor — 1D feature embedding vector (dimensionality depends on the model architecture)
+**Output:** `uint8` tensor of shape `[1, 1, 1, 1024]` — 1024-dimensional feature embedding vector
 **Dataset:** ImageNet (pre-trained)
 **Quantization:** Full integer (uint8 input and output)
 
@@ -26,7 +26,7 @@ Removes the final classification layer to output feature embeddings. Use for tra
 
 | Property | Value |
 |----------|-------|
-| Shape | `[1, D]` where D is the embedding dimension |
+| Shape | `[1, 1, 1, 1024]` |
 | Type | `uint8` (quantized) |
 | Interpretation | Feature embedding vector; similar images produce similar vectors |
 
@@ -114,7 +114,7 @@ print(f"Predicted class: {best_class}")
 
 | Metric | Value |
 |--------|-------|
-| Edge TPU Latency | ~2.8 ms |
+| Edge TPU Latency | 2.8 ms |
 | Model Size (Edge TPU) | 3.4 MB |
 
 Latency from the [Coral Models page](https://coral.ai/models/all/).

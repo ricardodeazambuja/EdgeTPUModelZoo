@@ -3,14 +3,12 @@
 **Task:** Semantic Segmentation
 **Input:** `uint8` tensor of shape `[1, 256, 256, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
 **Output:** Segmentation mask — each pixel assigned to a class
-**Dataset:** Custom
+**Dataset:** Oxford-IIIT Pet (from the [TensorFlow segmentation tutorial](https://www.tensorflow.org/tutorials/images/segmentation))
 **Quantization:** Full integer (uint8 input and output)
 
 ## Description
 
 U-Net semantic segmentation model with MobileNetV2 encoder backbone at 256x256 input resolution.
-
-Higher resolution variant provides more detailed segmentation masks at the cost of increased inference time.
 
 ## Input Details
 
@@ -26,19 +24,11 @@ Higher resolution variant provides more detailed segmentation masks at the cost 
 
 | Property | Value |
 |----------|-------|
-| Shape | Typically `[1, 256, 256, num_classes]` or `[1, 256, 256]` |
-| Type | `uint8` or `float32` |
-| Interpretation | Per-pixel class probabilities or class IDs |
+| Shape | `[1, 256, 256, 3]` |
+| Type | `uint8` |
+| Interpretation | Per-pixel scores for 3 classes: pet (0), outline (1), background (2) |
 
-Inspect the output shape at runtime to determine the exact format:
-
-```python
-output_details = interpreter.get_output_details()
-for i, detail in enumerate(output_details):
-    print(f"Output {i}: shape={detail['shape']}, dtype={detail['dtype']}")
-```
-
-If the output has a channel dimension with multiple classes, use `argmax` to get the class per pixel.
+Use `argmax` over the last dimension to get the class label per pixel.
 
 ## Files
 

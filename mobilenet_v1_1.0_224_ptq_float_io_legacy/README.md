@@ -109,8 +109,8 @@ for i, idx in enumerate(top_indices):
 
 | Metric | Value |
 |--------|-------|
-| Top-1 Accuracy (ImageNet) | ~69.5% |
-| Top-5 Accuracy (ImageNet) | ~90.6% |
+| Top-1 Accuracy (ImageNet) | 69.5% |
+| Top-5 Accuracy (ImageNet) | 90.6% |
 | Edge TPU Latency | 2.8 ms |
 | Model Size (Edge TPU) | 4.7 MB |
 

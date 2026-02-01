@@ -10,8 +10,6 @@
 
 MobileNet V1 full-size model (alpha=1.0, 224x224) for 1000-class ImageNet classification. Uses depthwise separable convolutions.
 
-The baseline full-size MobileNet V1. Best accuracy in the V1 family.
-
 ## Input Details
 
 | Property | Value |

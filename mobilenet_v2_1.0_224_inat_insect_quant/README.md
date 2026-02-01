@@ -2,15 +2,13 @@
 
 **Task:** Image Classification
 **Input:** `uint8` tensor of shape `[1, 224, 224, 3]` (batch, height, width, RGB channels), values in `[0, 255]`
-**Output:** `uint8` tensor of shape `[1, num_insect_classes]` — quantized class scores for each of the num_insect_classes categories
+**Output:** `uint8` tensor of shape `[1, 1022]` — quantized class scores for each of the 1022 insect species
 **Dataset:** iNaturalist 2017 (Insects)
 **Quantization:** Full integer (uint8 input and output)
 
 ## Description
 
 MobileNet V2 fine-tuned on iNaturalist 2017 for insect species classification.
-
-Useful for entomology, agriculture pest identification, and biodiversity monitoring.
 
 ## Input Details
 
@@ -26,7 +24,7 @@ Useful for entomology, agriculture pest identification, and biodiversity monitor
 
 | Property | Value |
 |----------|-------|
-| Shape | `[1, num_insect_classes]` |
+| Shape | `[1, 1022]` |
 | Type | `uint8` |
 | Interpretation | Higher value = higher confidence for that class |
 
