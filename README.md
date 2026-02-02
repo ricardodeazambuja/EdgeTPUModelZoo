@@ -61,47 +61,6 @@ A curated collection of pre-trained, quantized TFLite models compiled for the [G
 | [MobileNet V1 Embedding Extractor](./mobilenet_v1_1.0_224_quant_embedding_extractor/) | Feature Extraction | 224x224 | ImageNet | N/A | 2.8 ms |
 | [AutoML Video Traffic Model](./traffic_model/) | Video Object Detection | 256x256 | Custom (Traffic) | N/A | N/A |
 
-## Quick Start
-
-### Prerequisites
-
-```bash
-# Install the Edge TPU runtime
-# See: https://coral.ai/docs/accelerator/get-started/
-
-# Install PyCoral (Debian/Ubuntu)
-sudo apt-get install python3-pycoral
-
-# Or with pip (requires Google's extra index):
-# pip install --extra-index-url https://google-coral.github.io/py-repo/ pycoral~=2.0
-#
-# For full installation options, see: https://coral.ai/software/
-```
-
-### Basic Usage
-
-```python
-from pycoral.utils.edgetpu import make_interpreter
-from pycoral.adapters import common
-import numpy as np
-from PIL import Image
-
-# Load any Edge TPU model
-interpreter = make_interpreter("model_name_edgetpu.tflite")
-interpreter.allocate_tensors()
-
-# Prepare input
-input_details = interpreter.get_input_details()
-input_shape = input_details[0]["shape"]
-image = Image.open("image.jpg").resize((input_shape[2], input_shape[1]))
-input_data = np.expand_dims(np.array(image, dtype=np.uint8), axis=0)
-
-# Run inference
-common.set_input(interpreter, input_data)
-interpreter.invoke()
-output = common.output_tensor(interpreter, 0)
-```
-
 ## Model Categories
 
 ### Image Classification
